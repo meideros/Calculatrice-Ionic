@@ -17,10 +17,10 @@
       </ion-card-header>
       <ion-card-content>
         <ion-grid>
-          <ion-row *ngFor="let btns of grid let last = last">
-            <ion-col [size]="last ? 4 : 3" *ngFor="let btn of btns">
+          <ion-row *ngFor="let keys of Calculatorkeys let last = last">
+            <ion-col [size]="last ? 4 : 3" *ngFor="let key of keys">
               <div>
-                <ion-button (click)="doSomeThings(btn)" color="dark" [style.width.px]=" last? 105 : 80" [style.font-size.px]="20">{{btn}}</ion-button>
+                <ion-button (click)="doSomeThings(key)" color="dark" [style.width.px]=" last? 105 : 80" [style.font-size.px]="20">{{key}}</ion-button>
               </div>
             </ion-col>
           </ion-row>

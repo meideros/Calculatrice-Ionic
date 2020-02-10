@@ -7,7 +7,7 @@ import {compilerIsNewStylingInUse} from "@angular/compiler/src/render3/view/styl
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-   grid = [
+  Calculatorkeys = [
     [ "AC","+/-","%","/"],
     [ "7","8","9","x"],
     [ "4","5","6","-"],
@@ -16,9 +16,9 @@ export class Tab1Page {
   ];
   ecran = '';
   constructor() {}
-  doSomeThings(btn) {
-    if(isNaN(btn)){
-      switch (btn) {
+  doSomeThings(key) {
+    if(isNaN(key)){
+      switch (key) {
         case "AC":
           let screen = this.ecran.split('')
           screen.pop()
@@ -100,7 +100,7 @@ export class Tab1Page {
           break;
       }
     }else{
-      this.ecran += btn
+      this.ecran += key
     }   
   }
 }
